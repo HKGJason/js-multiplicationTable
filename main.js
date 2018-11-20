@@ -4,15 +4,10 @@ function createMultiplicationTable(num1, num2){
 	if(!checkifNuminRange(num1, num2)) return null;
 	if(!checkifStartNumSmaller(num1, num2)) return null;
 	var str = "";
-	var count = 0;
 	for (var i = num1 ; i <= num2 ; i++){
 		for (var j = num1 ; j <= i ; j++){
-			if (count != 0)
-				str = str + "  ";
-			str = str + appendTableStr(j,i);
-			count++;
+			str = str + appendTableStr(j,i,num2);
 		}
-		count = 0;
 		if (i!=num2)
 			str = str + "\n";
 	}
@@ -30,8 +25,22 @@ function checkifStartNumSmaller(num1, num2){
 	}
 	return true;
 }
-function appendTableStr(num1, num2){
+function appendTableStr(num1, num2, max){
+	var line = num1.toString()+"*"+num2.toString()+"="+num1*num2;
+	if (num1!=num2)
+		return alignTable(line, (max*max).toString().length+max.toString().length+max.toString().length+2);
 	return num1.toString()+"*"+num2.toString()+"="+num1*num2;
 }
+function alignTable(line, maxlength){
+	var appendlength = maxlength - line.length;
+	line = line + " ";
+	for (var i = 0 ;i < appendlength;i++){
+		line = line + " ";
+	}
+	return line;
+	
+}
+console.log(createMultiplicationTable(95,100));
+
 
 module.exports = createMultiplicationTable;

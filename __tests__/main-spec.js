@@ -1,7 +1,7 @@
 const createMultiplicationTable = require('../main');
 
 it ('To test the table output match', () => {
-	let expected = "2*2=4\n"+"2*3=6  3*3=9\n"+"2*4=8  3*4=12  4*4=16";
+	let expected = "2*2=4\n"+"2*3=6  3*3=9\n"+"2*4=8  3*4=12 4*4=16";
 	expect(createMultiplicationTable(2,4)).toBe(expected);
 });
 
