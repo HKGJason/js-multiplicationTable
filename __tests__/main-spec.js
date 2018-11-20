@@ -9,7 +9,7 @@ it ('To test start num less than end num', () => {
 	let expected = null;
 	expect(createMultiplicationTable(2,1)).toBe(expected);
 });
-/*
+
 it ('To test start num less than 1', () => {
 	let expected = null;
 	expect(createMultiplicationTable(0,1)).toBe(expected);
@@ -27,7 +27,7 @@ it ('To test end num less than 1', () => {
 	let expected = null;
 	expect(createMultiplicationTable(2,0)).toBe(expected);
 });
-*/
+
 it ('To test output with large inputs', () => {
 	let expected = null;
    expect(createMultiplicationTable(95,100)).toBe("95*95=9025\n"+
