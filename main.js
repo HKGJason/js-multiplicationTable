@@ -1,10 +1,8 @@
 
 
 function createMultiplicationTable(num1, num2){
-	let valid = checkifNumValid(num1, num2);
-	if (!valid){
-		return null;
-	}
+	if(!checkifNuminRange(num1, num2)) return null;
+	if(!checkifStartNumSmaller(num1, num2)) return null;
 	var str = "";
 	var count = 0;
 	for (var i = num1 ; i <= num2 ; i++){
@@ -20,10 +18,13 @@ function createMultiplicationTable(num1, num2){
 	}
 	return str;
 }
-function checkifNumValid(num1, num2){
+function checkifNuminRange(num1, num2){
 	if (num1 > 1000 || num1 < 1 || num2 > 1000 || num2 < 1){
 		return false;
 	}
+	return true;
+}
+function checkifStartNumSmaller(num1, num2){
 	if (num1 > num2){
 		return false;
 	}
