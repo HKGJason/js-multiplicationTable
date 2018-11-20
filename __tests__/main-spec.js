@@ -5,7 +5,7 @@ it ('To test the table output match', () => {
 	expect(createMultiplicationTable(2,4)).toBe(expected);
 });
 
-it ('To test start num less than end num', () => {
+it ('To test start num greater than end num', () => {
 	let expected = null;
 	expect(createMultiplicationTable(2,1)).toBe(expected);
 });
