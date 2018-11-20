@@ -1,0 +1,22 @@
+{
+  "name": "js-multi",
+  "version": "1.0.0",
+  "description": "test on multi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HKGJason/js-multiplicationTable.git"
+  },
+  "author": "J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HKGJason/js-multiplicationTable/issues"
+  },
+  "homepage": "https://github.com/HKGJason/js-multiplicationTable#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
