@@ -40,7 +40,6 @@ function alignTable(line, maxlength){
 	return line;
 	
 }
-console.log(createMultiplicationTable(95,100));
 
 
 module.exports = createMultiplicationTable;
